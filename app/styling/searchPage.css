@@ -1,0 +1,28 @@
+.searchPage {
+
+}
+
+.header {
+  font-family: garamond;
+  text-align: center;
+}
+
+/* Location */
+
+.location {
+  display: flex;
+  justify-content: center;
+}
+
+/* Foods Styling */
+.food {
+  width: 200px;
+  height: 200px;
+}
+
+/* Drinks Styling */
+
+.Drinks {
+  width: 200px;
+  height: 100px;
+}

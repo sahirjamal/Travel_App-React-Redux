@@ -7,10 +7,11 @@ class DrinksResults extends React.Component {
   render() {
     return (
       <div className='DrinksResults'>
-        <h3>Drinks</h3>
+        <h3>Drinks</h3> 
       </div>
     )
   }
 }
 
+// comment
 export default DrinksResults

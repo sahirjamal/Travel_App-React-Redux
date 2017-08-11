@@ -1,4 +1,5 @@
 {
   "HOME": "/home",
-  "SEARCH": "/search"
+  "SEARCH": "/search",
+  "RESULTS": "/results"
 }

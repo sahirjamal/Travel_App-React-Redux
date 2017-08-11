@@ -9,30 +9,34 @@ import { toggleFoods } from '../../actions/index';
 
 import searchReducer from '../../reducers/searchReducer';
 
+const foods = ['Indian', 'Chinese', 'Italian', 'American', 'Vietnemese', 'Korean', 'Thai', 'Greek', 'Vegetarian'];
+
 class Foods extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      foods: ['Indian', 'Chinese', 'Italian', 'American', 'Vietnemese', 'Korean', 'Thai', 'Greek', 'Vegetarian'],
-      active: {}
+      food: {}
     }
   }
 
-  handleClick(key) {
-    return Object.assign({}, this.state, {active: {key: Boolean}})
-  }
+  // handleClick(key) {
+  //   const active = this.state.food;
+  //   if (active[key]) {
+  //     active[key] = !active[key];
+  //   } else {
+  //     active[key] = true;
+  //   }
+  //   this.setState({food: active})
+  // }
 
   render() {
-    const { active } = this.state;
 
     return (
       <div className='food'>
         <h3>Food</h3>
-        {console.log(this.state)}
-        <Button toggle active={active} onClick={this.handleClick()}>Hello Sahir</Button>
-        {this.state.foods.map((food) => 
-          <Button toggle active={active} onClick={this.handleClick(food)} basic color='blue' onClick={() => this.props.toggleFoods(food)} key={food}>{food}</Button>)}
+        {foods.map((food) => 
+          <Button basic color='blue' onClick={() => this.props.toggleFoods(food)} key={food}>{food}</Button>)}
       </div>
     )
   }

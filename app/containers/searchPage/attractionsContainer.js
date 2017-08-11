@@ -6,6 +6,8 @@ import Flexbox from 'flexbox-react';
 import { Button } from 'semantic-ui-react';
 import { toggleAttractions } from '../../actions/index';
 
+import searchReducer from '../../reducers/searchReducer';
+
 class Attractions extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +29,7 @@ class Attractions extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    attractions: state.attractions,
+    attractions: state.searchReducer.attractions,
   }
 }
 

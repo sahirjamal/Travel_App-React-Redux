@@ -6,6 +6,8 @@ import Flexbox from 'flexbox-react';
 import { Form } from 'semantic-ui-react';
 import { changeLocation } from '../../actions/index';
 
+import locationReducer from '../../reducers/locationReducer';
+
 class Location extends React.Component {
 
   render() {
@@ -21,7 +23,7 @@ class Location extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    location: state.location,
+    location: state.locationReducer.location,
   }
 }
 

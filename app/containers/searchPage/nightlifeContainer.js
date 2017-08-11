@@ -6,6 +6,8 @@ import Flexbox from 'flexbox-react';
 import { Button } from 'semantic-ui-react';
 import { toggleNightlife } from '../../actions/index';
 
+import searchReducer from '../../reducers/searchReducer';
+
 class Nightlife extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +29,7 @@ class Nightlife extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    nightlife: state.nightlife
+    nightlife: state.searchReducer.nightlife
   }
 }
 

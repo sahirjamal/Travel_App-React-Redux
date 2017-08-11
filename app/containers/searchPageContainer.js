@@ -12,6 +12,7 @@ import Drinks from './searchPage/drinksContainer';
 import Attractions from './searchPage/attractionsContainer';
 import Arts from './searchPage/artsContainer';
 import Nightlife from './searchPage/nightlifeContainer';
+import Budget from './searchPage/budgetContainer';
 
 class SearchPageContainer extends React.Component {
     render() {
@@ -28,6 +29,10 @@ class SearchPageContainer extends React.Component {
               <Attractions />
               <Arts />
               <Nightlife />
+          </div>
+
+          <div className='budget'>
+            <Budget />
           </div>
         </div>
      )

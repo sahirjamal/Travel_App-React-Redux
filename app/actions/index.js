@@ -1,6 +1,7 @@
 import * as types from './types';
 import { push } from 'react-router-redux';
 
+// Routes Function
 export function navigate(route){
   return push(route)
 }
@@ -46,5 +47,14 @@ export function toggleNightlife(nightlife) {
   return {
     type: types.TOGGLE_NIGHTLIFE,
     nightlife
+  };
+}
+
+// Budget Function
+
+export function changeBudget(budget) {
+  return {
+    type: types.CHANGE_BUDGET,
+    budget
   };
 }

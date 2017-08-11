@@ -19,6 +19,7 @@ render() {
           </div>
         </div>
       </div>
+      //Herro
     )
   }
 }
@@ -31,6 +32,6 @@ const mapDispatchToProps = (dispatch) => {
 
 
 export default connect(
-  null, 
+  null,
   mapDispatchToProps
 )(HomePageContainer)

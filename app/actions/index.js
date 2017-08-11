@@ -1,4 +1,9 @@
 import * as types from './types';
+import { push } from 'react-router-redux';
+
+export function navigate(route){
+  return push(route)
+}
 
 // Location Functions
 export function changeLocation(location) {

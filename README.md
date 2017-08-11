@@ -1,1 +1,1 @@
-Basic React Template
+Welcome to Travel Buddy

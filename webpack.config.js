@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
-	entry: './main.js',
+	entry: './app/main.js',
 	output: {
 		path: __dirname + '/build',
 		filename: 'main.bundle.js'
@@ -21,11 +21,14 @@ module.exports = {
 			{
         test: /\.css$/,
         use: [ 'style-loader', 'css-loader' ]
-      }
+			},
+			{ test: /\.(png|jpg)$/, 
+				loader: 'file-loader' 
+			}
 		]
 	},
 	stats: {
 		colors: true
 	},
-	devtool: 'source-map'
+	devtool: 'source-map',
 };

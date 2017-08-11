@@ -1,5 +1,4 @@
 .searchPage {
-
 }
 
 .header {
@@ -18,6 +17,7 @@
 .food {
   width: 200px;
   height: 200px;
+  align-items: center;
 }
 
 /* Drinks Styling */

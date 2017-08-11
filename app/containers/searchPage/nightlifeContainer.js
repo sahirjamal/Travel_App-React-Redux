@@ -13,15 +13,16 @@ class Nightlife extends React.Component {
     super(props);
 
     this.state = {
-      nightlife: ['Dive Bars', 'Dance Clubs', 'Lounges', 'Wine Bars', 'Cocktail Bars', 'Pubs', 'Sports Bars']
+      nightlife: ['Dive Bars', 'Dance Clubs', 'Lounges', 'Wine Bars', 'Cocktail Bars', 'Pubs', 'Sports Bars'],
     }
   }
+
   render() {
     return (
       <div className='Nightlife'>
         <h3>Nightlife</h3>
-        {this.state.nightlife.map((nightlife) => 
-          <Button onClick={() => this.props.toggleNightlife(nightlife)} key={nightlife}>{nightlife}</Button>)}
+          {this.state.nightlife.map((nightlife) => 
+            <Button onClick={() => this.props.toggleNightlife(nightlife)} key={nightlife}>{nightlife}</Button>)}
       </div>
     )
   }

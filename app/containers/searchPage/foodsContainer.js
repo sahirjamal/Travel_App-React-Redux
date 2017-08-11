@@ -21,8 +21,8 @@ class Foods extends React.Component {
     return (
       <div className='food'>
         <h3>Food</h3>
-        {this.state.foods.map((food) => 
-          <Button onClick={() => this.props.toggleFoods(food)} key={food}>{food}</Button>)}
+          {this.state.foods.map((food) => 
+            <Button basic color='blue' onClick={() => this.props.toggleFoods(food)} key={food}>{food}</Button>)}
       </div>
     )
   }

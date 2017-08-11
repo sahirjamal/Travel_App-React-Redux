@@ -11,9 +11,10 @@ import budgetReducer from '../../reducers/budgetReducer';
 class Budget extends React.Component {
   render() {
     return (
-      <div>
-        <h4>Max Budget: {this.props.budget}</h4>
-        <input type='range' min={0} max={1000} value={this.props.budget} onChange={(e) => this.props.changeBudget(e.target.value)}/>
+      <div className='budgetDiv'>
+        <h4>Max Budget: ${this.props.budget}</h4>
+        <input type='range' min={0} max={1000} value={this.props.budget} className='budgetSlider'
+                            onChange={(e) => this.props.changeBudget(e.target.value)} />
       </div>
     )
   }

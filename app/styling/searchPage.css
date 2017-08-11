@@ -12,14 +12,32 @@
 
 /* Foods Styling */
 .food {
-  width: 200px;
-  height: 200px;
-  align-items: center;
+  width: 400px;
+  text-align: center;
 }
 
 /* Drinks Styling */
 
 .Drinks {
-  width: 200px;
+  width: 400px;
+}
+
+/* Budget Styling */
+
+.budget {
   height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.budgetDiv {
+  text-align: center;
+  width: 400px;
+}
+
+/* Travel Now Button Styling */
+
+.travelNow {
+  display: flex;
+  justify-content: center;
 }

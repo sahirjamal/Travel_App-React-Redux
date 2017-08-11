@@ -18,11 +18,10 @@ class Drinks extends React.Component {
   }
   render() {
     return (
-      <div className='Drinks' style={Styling.drinks}>
+      <div className='Drinks'>
         <h3>Drinks</h3>
-        {/* <Button icon='bookmark' label='bookmark' accent/>  */}
-        {this.state.drinks.map((drink) => 
-          <Button onClick={() => this.props.toggleDrinks(drink)} key={drink}>{drink}</Button>)}
+          {this.state.drinks.map((drink) => 
+            <Button onClick={() => this.props.toggleDrinks(drink)} key={drink}>{drink}</Button>)}
       </div>
     )
   }

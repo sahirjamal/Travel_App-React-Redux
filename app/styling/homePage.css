@@ -5,7 +5,6 @@
 }
 
 .background {
-  font-family: garamond;
   text-align: center;
 }
 
@@ -16,6 +15,7 @@
 
 .title {
   font-size: 80px;
+  font-family: garamond;
 }
 
 .phrase {

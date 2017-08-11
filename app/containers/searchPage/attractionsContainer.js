@@ -20,8 +20,8 @@ class Attractions extends React.Component {
     return (
       <div className='Attractions'>
         <h3>Attractions</h3>
-        {this.state.attractions.map((attraction) => 
-          <Button onClick={() => this.props.toggleAttractions(attraction)} key={attraction}>{attraction}</Button>)}
+          {this.state.attractions.map((attraction) => 
+            <Button onClick={() => this.props.toggleAttractions(attraction)} key={attraction}>{attraction}</Button>)}
       </div>
     )
   }

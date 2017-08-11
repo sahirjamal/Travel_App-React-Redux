@@ -20,8 +20,8 @@ class Arts extends React.Component {
     return (
       <div className='Arts'>
         <h3>Arts</h3>
-        {this.state.arts.map((art) => 
-          <Button onClick={() => this.props.toggleArts(art)} key={art}>{art}</Button>)}
+          {this.state.arts.map((art) => 
+            <Button onClick={() => this.props.toggleArts(art)} key={art}>{art}</Button>)}
       </div>
     )
   }

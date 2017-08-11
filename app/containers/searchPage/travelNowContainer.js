@@ -7,7 +7,7 @@ class TravelNow extends React.Component {
   render() {
     return (
       <div className='travelNowButton'>
-            <Button key='travelNowButton'>Travel Now!</Button>
+            <Button size='large' key='travelNowButton'>Travel Now!</Button>
       </div>
     )
   }

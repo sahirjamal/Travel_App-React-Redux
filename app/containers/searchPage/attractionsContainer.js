@@ -21,7 +21,7 @@ class Attractions extends React.Component {
       <div className='Attractions'>
         <h3>Attractions</h3>
           {this.state.attractions.map((attraction) => 
-            <Button onClick={() => this.props.toggleAttractions(attraction)} key={attraction}>{attraction}</Button>)}
+            <Button basic color='blue' onClick={() => this.props.toggleAttractions(attraction)} key={attraction}>{attraction}</Button>)}
       </div>
     )
   }

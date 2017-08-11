@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import _ from 'underscore';
 
 import Styling from '../../styling/searchPage.css';
 import Flexbox from 'flexbox-react';
@@ -13,16 +14,25 @@ class Foods extends React.Component {
     super(props);
 
     this.state = {
-      foods: ['Indian', 'Chinese', 'Italian', 'American', 'Vietnemese', 'Korean', 'Thai', 'Greek', 'Vegetarian']
+      foods: ['Indian', 'Chinese', 'Italian', 'American', 'Vietnemese', 'Korean', 'Thai', 'Greek', 'Vegetarian'],
+      active: {}
     }
   }
 
+  handleClick(key) {
+    return Object.assign({}, this.state, {active: {key: Boolean}})
+  }
+
   render() {
+    const { active } = this.state;
+
     return (
       <div className='food'>
         <h3>Food</h3>
-          {this.state.foods.map((food) => 
-            <Button basic color='blue' onClick={() => this.props.toggleFoods(food)} key={food}>{food}</Button>)}
+        {console.log(this.state)}
+        <Button toggle active={active} onClick={this.handleClick()}>Hello Sahir</Button>
+        {this.state.foods.map((food) => 
+          <Button toggle active={active} onClick={this.handleClick(food)} basic color='blue' onClick={() => this.props.toggleFoods(food)} key={food}>{food}</Button>)}
       </div>
     )
   }

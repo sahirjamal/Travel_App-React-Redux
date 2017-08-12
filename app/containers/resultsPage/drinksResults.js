@@ -13,5 +13,4 @@ class DrinksResults extends React.Component {
   }
 }
 
-// comment
 export default DrinksResults

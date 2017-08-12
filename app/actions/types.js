@@ -12,3 +12,6 @@ export const TOGGLE_NIGHTLIFE = 'TOGGLE_NIGHTLIFE';
 
 // Budget actions
 export const CHANGE_BUDGET = 'CHANGE_BUDGET';
+
+// Results actions
+export const ADD_TO_LIST = 'ADD_TO_LIST';

@@ -6,6 +6,7 @@ import Drinks from './resultsPage/drinksResults';
 import Attractions from './resultsPage/attractionsResults';
 import Arts from './resultsPage/artsResults';
 import Nightlife from './resultsPage/nightlifeResults';
+import SelectedOptions from './resultsPage/SelectedOptions';
 
 class ResultsPageContainer extends React.Component {
   render() {
@@ -13,6 +14,10 @@ class ResultsPageContainer extends React.Component {
       <div className='resultsPage'>
         <div className='header'>
           <h1>Options</h1>
+        </div>
+
+        <div className='selectedOptionsResults'>
+          <SelectedOptions />
         </div>
 
         <div className='searchResults'>

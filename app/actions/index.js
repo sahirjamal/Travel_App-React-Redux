@@ -58,3 +58,12 @@ export function changeBudget(budget) {
     budget
   };
 }
+
+// Results Function
+
+export function addToList(place) {
+  return {
+    type: types.ADD_TO_LIST,
+    place
+  }
+}

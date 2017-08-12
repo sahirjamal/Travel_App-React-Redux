@@ -34,9 +34,9 @@ class Foods extends React.Component {
 
     return (
       <div className='food'>
-        <h3>Food</h3>
+        <h3 className='foodTitle'>Food</h3>
         {foods.map((food) => 
-          <Button basic color='blue' onClick={() => this.props.toggleFoods(food)} key={food}>{food}</Button>)}
+          <Button basic color='blue' size='mini' onClick={() => this.props.toggleFoods(food)} key={food}>{food}</Button>)}
       </div>
     )
   }

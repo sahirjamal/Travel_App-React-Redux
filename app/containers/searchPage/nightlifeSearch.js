@@ -14,15 +14,34 @@ class Nightlife extends React.Component {
 
     this.state = {
       nightlife: ['Dive Bars', 'Dance Clubs', 'Lounges', 'Wine Bars', 'Cocktail Bars', 'Pubs', 'Sports Bars'],
+      active: {
+        'Dive Bars': false,
+        'Dance Clubs': false,
+        'Lounges': false,
+        'Wine Bars': false,
+        'Cocktail Bars': false,
+        'Pubs': false,
+        'Sports Bars': false
+      }
     }
   }
 
+  toggleAndActive(key) {
+    this.props.toggleNightlife(key)
+
+    let newState = this.state.active;
+    newState[key] = !this.state.active[key];
+    this.setState({active: newState});
+  }
+
   render() {
+    const { active } = this.state;
     return (
       <div className='nightlife'>
         <h3 className='nightlifeTitle'>Nightlife</h3>
           {this.state.nightlife.map((nightlife) => 
-            <Button basic color='blue' size='mini' onClick={() => this.props.toggleNightlife(nightlife)} key={nightlife}>{nightlife}</Button>)}
+            <Button color='teal' toggle active={active[nightlife]} size='mini' 
+              onClick={() => this.toggleAndActive(nightlife)} key={nightlife}>{nightlife}</Button>)}
       </div>
     )
   }

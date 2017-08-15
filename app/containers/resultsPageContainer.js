@@ -22,6 +22,7 @@ class ResultsPageContainer extends React.Component {
 
         <div className='searchResults'>
           <Drinks />
+          <Foods />
         </div>
       </div>
    )

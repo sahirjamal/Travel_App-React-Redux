@@ -21,7 +21,7 @@ class Drinks extends React.Component {
       <div className='Drinks'>
         <h3>Drinks</h3>
           {this.state.drinks.map((drink) => 
-            <Button basic color='blue' onClick={() => this.props.toggleDrinks(drink)} key={drink}>{drink}</Button>)}
+            <Button basic color='blue' size='mini' onClick={() => this.props.toggleDrinks(drink)} key={drink}>{drink}</Button>)}
       </div>
     )
   }

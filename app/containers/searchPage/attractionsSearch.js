@@ -13,7 +13,7 @@ class Attractions extends React.Component {
     super(props);
 
     this.state = {
-      attractions: ['Parks', 'Museums', 'Landmarks', 'Historical Buildings', 'View Points']
+      attractions: ['Parks', 'Museums', 'Landmarks', 'View Points']
     }
   }
   render() {
@@ -21,7 +21,7 @@ class Attractions extends React.Component {
       <div className='Attractions'>
         <h3>Attractions</h3>
           {this.state.attractions.map((attraction) => 
-            <Button basic color='blue' onClick={() => this.props.toggleAttractions(attraction)} key={attraction}>{attraction}</Button>)}
+            <Button basic color='blue' size='mini' onClick={() => this.props.toggleAttractions(attraction)} key={attraction}>{attraction}</Button>)}
       </div>
     )
   }

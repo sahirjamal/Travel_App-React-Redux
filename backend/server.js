@@ -1,19 +1,21 @@
 const express = require('express');
 const path = require('path');
+const yelp = require('yelp-fusion');
+const api = require('./routes');
 const app = express();
 
 app.use(express.static('build'));
+
+app.use('/api', api);
 
 app.get('/*', function(req, res) {
 	res.sendFile(path.join(__dirname, 'index.html'));
 })
 
-// Get access token which is valid for 180 days
 
+// Get access token which is valid for 180 days
 // const clientId = process.env.YELP_CLIENT_ID;
 // const clientSecret= process.env.YELP_CLIENT_SECRET;
-// console.log(clientId);
-// console.log(clientSecret);
 
 // const token = yelp.accessToken(clientId, clientSecret)
 // .then(response => {
@@ -31,5 +33,5 @@ app.get('/*', function(req, res) {
 // .catch(error => {console.log(error)});
 
 app.listen(3000, () => {
-	console.log('Server for React Todo App listening on port 3000!')
+	console.log('Listening on port 3000 captain!')
 });

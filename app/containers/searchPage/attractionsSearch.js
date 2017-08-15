@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Styling from '../../styling/searchPage.css';
+import Styling from '../../styling/searchOptions.css';
 import Flexbox from 'flexbox-react';
 import { Button } from 'semantic-ui-react';
 import { toggleAttractions } from '../../actions/index';
@@ -18,8 +18,8 @@ class Attractions extends React.Component {
   }
   render() {
     return (
-      <div className='Attractions'>
-        <h3>Attractions</h3>
+      <div className='attractions'>
+        <h3 className='attractionsTitle'>Attractions</h3>
           {this.state.attractions.map((attraction) => 
             <Button basic color='blue' size='mini' onClick={() => this.props.toggleAttractions(attraction)} key={attraction}>{attraction}</Button>)}
       </div>

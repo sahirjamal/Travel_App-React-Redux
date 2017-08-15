@@ -1,5 +1,5 @@
 import React from 'react';
-import Styling from '../../styling/searchPage.css';
+import Styling from '../../styling/searchPageContainer.css';
 import Flexbox from 'flexbox-react';
 import { Button } from 'semantic-ui-react';
 

@@ -2,21 +2,19 @@ import React from 'react';
 import { connect } from 'react-redux';
 import _ from 'underscore';
 
-import Styling from '../../styling/searchPage.css';
+import Styling from '../../styling/searchOptions.css';
 import Flexbox from 'flexbox-react';
-import { Button } from 'semantic-ui-react';
+import { Grid, Container, Button } from 'semantic-ui-react';
 import { toggleFoods } from '../../actions/index';
 
 import searchReducer from '../../reducers/searchReducer';
-
-const foods = ['Indian', 'Chinese', 'Italian', 'American', 'Vietnemese', 'Korean', 'Thai', 'Greek', 'Vegetarian'];
 
 class Foods extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      food: {}
+      foods: ['Indian', 'Chinese', 'Italian', 'American', 'Vietnemese', 'Korean', 'Thai', 'Greek', 'Vegetarian']
     }
   }
 
@@ -33,11 +31,15 @@ class Foods extends React.Component {
   render() {
 
     return (
-      <div className='food'>
-        <h3 className='foodTitle'>Food</h3>
-        {foods.map((food) => 
-          <Button basic color='blue' size='mini' onClick={() => this.props.toggleFoods(food)} key={food}>{food}</Button>)}
-      </div>
+      <Container className='foods'>
+        <Grid>
+          <Grid.Row columns={2}>
+            <Grid.Column><h3 className='foodsTitle'>Food</h3>
+        {this.state.foods.map((food) => 
+          <Button basic color='blue' size='mini' onClick={() => this.props.toggleFoods(food)} key={food}>{food}</Button>)}</Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Container>
     )
   }
 }

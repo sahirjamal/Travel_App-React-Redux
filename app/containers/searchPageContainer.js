@@ -1,6 +1,7 @@
 import React from 'react';
 // import { bindActionCreators } from 'redux';
-import Styling from '../styling/searchPage.css';
+import Styling from '../styling/searchPageContainer.css';
+import { Container, Divider, Grid, Header } from 'semantic-ui-react';
 
 import Location from './searchPage/locationContainer';
 import Foods from './searchPage/foodsSearch';
@@ -15,26 +16,30 @@ class SearchPageContainer extends React.Component {
     render() {
       return (
         <div className='searchPage'>
-          <div className='header'>
-            <h1>Plan Your Journey</h1>
+          <Container className='header'>
+            <Header as='h1'>Plan Your Journey</Header>
             <Location />
-          </div>
+          </Container>
   
-          <div className='choices'>
-              <Foods />
-              <Drinks />
-              <Attractions />
-              <Arts />
-              <Nightlife />
-          </div>
+          <Container className='choices'>
+            <Foods />
+            <Drinks />
+            <Attractions />
+            <Arts />
+            <Nightlife />
+          </Container>
 
-          <div className='budget'>
-            <Budget />
-          </div>
+          <Container>
+            <div className='budget'>
+              <Budget />
+            </div>
+          </Container>
 
-          <div className='travelNow'>
-            <TravelNow />
-          </div>
+          <Container className='travelNow'>
+            <Grid centered columns={2}>
+              <TravelNow />
+            </Grid>
+          </Container>
         </div>
      )
     }

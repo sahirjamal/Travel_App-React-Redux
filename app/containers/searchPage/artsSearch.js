@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Styling from '../../styling/searchPage.css';
+import Styling from '../../styling/searchOptions.css';
 import Flexbox from 'flexbox-react';
 import { Button } from 'semantic-ui-react';
 import { toggleArts } from '../../actions/index';
@@ -18,8 +18,8 @@ class Arts extends React.Component {
   }
   render() {
     return (
-      <div className='Arts'>
-        <h3>Arts</h3>
+      <div className='arts'>
+        <h3 className='artsTitle'>Arts</h3>
           {this.state.arts.map((art) => 
             <Button basic color='blue' size='mini' onClick={() => this.props.toggleArts(art)} key={art}>{art}</Button>)}
       </div>

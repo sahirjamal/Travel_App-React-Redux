@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Styling from '../../styling/searchPage.css';
+import Styling from '../../styling/searchOptions.css';
 import Flexbox from 'flexbox-react';
 import { Form } from 'semantic-ui-react';
 import { changeLocation } from '../../actions/index';

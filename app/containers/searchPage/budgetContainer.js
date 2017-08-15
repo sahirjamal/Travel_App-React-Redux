@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Styling from '../../styling/searchPage.css';
+import Styling from '../../styling/searchPageContainer.css';
 import Flexbox from 'flexbox-react';
 import { Rating } from 'semantic-ui-react';
 import { changeBudget } from '../../actions/index';

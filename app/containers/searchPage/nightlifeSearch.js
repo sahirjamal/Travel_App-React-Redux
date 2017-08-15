@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Styling from '../../styling/searchPage.css';
+import Styling from '../../styling/searchOptions.css';
 import Flexbox from 'flexbox-react';
 import { Button } from 'semantic-ui-react';
 import { toggleNightlife } from '../../actions/index';
@@ -19,8 +19,8 @@ class Nightlife extends React.Component {
 
   render() {
     return (
-      <div className='Nightlife'>
-        <h3>Nightlife</h3>
+      <div className='nightlife'>
+        <h3 className='nightlifeTitle'>Nightlife</h3>
           {this.state.nightlife.map((nightlife) => 
             <Button basic color='blue' size='mini' onClick={() => this.props.toggleNightlife(nightlife)} key={nightlife}>{nightlife}</Button>)}
       </div>

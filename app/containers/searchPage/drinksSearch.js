@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Styling from '../../styling/searchPage.css';
+import Styling from '../../styling/searchOptions.css';
 import Flexbox from 'flexbox-react';
 import { Button } from 'semantic-ui-react';
 import { toggleDrinks } from '../../actions/index';
@@ -18,8 +18,8 @@ class Drinks extends React.Component {
   }
   render() {
     return (
-      <div className='Drinks'>
-        <h3>Drinks</h3>
+      <div className='drinks'>
+        <h3 className='drinksTitle'>Drinks</h3>
           {this.state.drinks.map((drink) => 
             <Button basic color='blue' size='mini' onClick={() => this.props.toggleDrinks(drink)} key={drink}>{drink}</Button>)}
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Styling from '../styling/resultsPage.css';
+import Styling from '../styling/resultsPageContainer.css';
 
 import Foods from './resultsPage/foodsResults';
 import Drinks from './resultsPage/drinksResults';

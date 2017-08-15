@@ -22,7 +22,7 @@ class Nightlife extends React.Component {
       <div className='Nightlife'>
         <h3>Nightlife</h3>
           {this.state.nightlife.map((nightlife) => 
-            <Button basic color='blue' onClick={() => this.props.toggleNightlife(nightlife)} key={nightlife}>{nightlife}</Button>)}
+            <Button basic color='blue' size='mini' onClick={() => this.props.toggleNightlife(nightlife)} key={nightlife}>{nightlife}</Button>)}
       </div>
     )
   }

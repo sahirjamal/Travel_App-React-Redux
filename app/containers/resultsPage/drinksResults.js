@@ -1,6 +1,8 @@
 import React from 'react';
 import Styling from '../../styling/resultsPage.css';
 import Flexbox from 'flexbox-react';
+import axios from 'axios';
+import yelp from 'yelp-fusion';
 
 
 class DrinksResults extends React.Component {

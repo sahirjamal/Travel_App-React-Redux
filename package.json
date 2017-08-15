@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack",
     "dev": "webpack-dev-server --content-base build/ --history-api-fallback",
-    "server": "server",
+    "server": "nodemon ./backend/server.js",
     "start": "node main.js"
   },
   "repository": {
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/sahirjamal/reactToDoListApp#readme",
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-preset-es2016": "^6.24.1",

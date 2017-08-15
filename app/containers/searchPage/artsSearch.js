@@ -13,15 +13,32 @@ class Arts extends React.Component {
     super(props);
 
     this.state = {
-      arts: ['Comedy Shows', 'Theatre', 'Art Galleries', 'Music Venues']
+      arts: ['Comedy Shows', 'Theatre', 'Art Galleries', 'Music Venues'],
+      active: {
+        'Comedy Shows': false,
+        'Theatre': false,
+        'Art Galleries': false,
+        'Music Venues': false,
+      }
     }
   }
+
+  toggleAndActive(key) {
+    this.props.toggleArts(key)
+
+    let newState = this.state.active;
+    newState[key] = !this.state.active[key];
+    this.setState({active: newState});
+  }
+
   render() {
+    const { active } = this.state;
     return (
       <div className='arts'>
         <h3 className='artsTitle'>Arts</h3>
           {this.state.arts.map((art) => 
-            <Button basic color='blue' size='mini' onClick={() => this.props.toggleArts(art)} key={art}>{art}</Button>)}
+            <Button color='teal' toggle active={active[art]} size='mini' 
+              onClick={() => this.toggleAndActive(art)} key={art}>{art}</Button>)}
       </div>
     )
   }

@@ -14,37 +14,45 @@ class Foods extends React.Component {
     super(props);
 
     this.state = {
-      foods: ['Indian', 'Chinese', 'Italian', 'American', 'Vietnemese', 'Korean', 'Thai', 'Greek', 'Vegetarian']
+      foods: ['Indian', 'Chinese', 'Italian', 'American', 'Vietnemese', 'Korean', 'Thai', 'Greek', 'Vegetarian'],
+      active: {
+        'Indian': false,
+        'Chinese': false,
+        'Italian': false,
+        'American': false,
+        'Vietnemese': false,
+        'Korean': false,
+        'Thai': false,
+        'Greek': false,
+        'Vegetarian': false
+      }
     }
   }
 
-  // handleClick(key) {
-  //   const active = this.state.food;
-  //   if (active[key]) {
-  //     active[key] = !active[key];
-  //   } else {
-  //     active[key] = true;
-  //   }
-  //   this.setState({food: active})
-  // }
+  toggleAndActive(key) {
+    this.props.toggleFoods(key)
+
+    let newState = this.state.active;
+    newState[key] = !this.state.active[key];
+    this.setState({active: newState});
+  }
+
 
   render() {
-
+    const { active } = this.state;
     return (
       <Container className='foods'>
-        <Grid>
-          <Grid.Row columns={2}>
-            <Grid.Column><h3 className='foodsTitle'>Food</h3>
+        <h3 className='foodsTitle'>Foods</h3>
         {this.state.foods.map((food) => 
-          <Button basic color='blue' size='mini' onClick={() => this.props.toggleFoods(food)} key={food}>{food}</Button>)}</Grid.Column>
-          </Grid.Row>
-        </Grid>
+          <Button color='violet' toggle active={active[food]} size='mini' 
+            onClick={() => this.toggleAndActive(food)} key={food}>{food}</Button>)}
       </Container>
     )
   }
 }
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return {
     foods: state.searchReducer.foods,
   }

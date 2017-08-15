@@ -13,15 +13,32 @@ class Attractions extends React.Component {
     super(props);
 
     this.state = {
-      attractions: ['Parks', 'Museums', 'Landmarks', 'View Points']
+      attractions: ['Parks', 'Museums', 'Landmarks', 'View Points'],
+      active: {
+        'Parks': false,
+        'Museums': false,
+        'Landmarks': false,
+        'View Points': false
+      }
     }
   }
+
+  toggleAndActive(key) {
+    this.props.toggleAttractions(key)
+
+    let newState = this.state.active;
+    newState[key] = !this.state.active[key];
+    this.setState({active: newState});
+  }
+
   render() {
+    const { active } = this.state;
     return (
       <div className='attractions'>
         <h3 className='attractionsTitle'>Attractions</h3>
           {this.state.attractions.map((attraction) => 
-            <Button basic color='blue' size='mini' onClick={() => this.props.toggleAttractions(attraction)} key={attraction}>{attraction}</Button>)}
+            <Button color='teal' toggle active={active[attraction]} size='mini' 
+              onClick={() => this.toggleAndActive(attraction)} key={attraction}>{attraction}</Button>)}
       </div>
     )
   }

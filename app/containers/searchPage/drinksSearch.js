@@ -13,15 +13,34 @@ class Drinks extends React.Component {
     super(props);
 
     this.state = {
-      drinks: ['Coffee', 'Tea', 'Smoothies', 'Cocktails', 'Wine & Spirits', 'Beer']
+      drinks: ['Coffee', 'Tea', 'Smoothies', 'Cocktails', 'Wine & Spirits', 'Beer'],
+      active: {
+        'Coffee': false,
+        'Tea': false,
+        'Smoothies': false,
+        'Cocktails': false,
+        'Wine & Spirits': false,
+        'Beer': false,
+      }
     }
   }
+
+  toggleAndActive(key) {
+    this.props.toggleDrinks(key)
+
+    let newState = this.state.active;
+    newState[key] = !this.state.active[key];
+    this.setState({active: newState});
+  }
+
   render() {
+    const { active } = this.state;
     return (
       <div className='drinks'>
         <h3 className='drinksTitle'>Drinks</h3>
           {this.state.drinks.map((drink) => 
-            <Button basic color='blue' size='mini' onClick={() => this.props.toggleDrinks(drink)} key={drink}>{drink}</Button>)}
+            <Button color='teal' toggle active={active[drink]} size='mini' 
+              onClick={() => this.toggleAndActive(drink)} key={drink}>{drink}</Button>)}
       </div>
     )
   }

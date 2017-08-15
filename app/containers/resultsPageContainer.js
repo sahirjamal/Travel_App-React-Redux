@@ -1,5 +1,6 @@
 import React from 'react';
 import Styling from '../styling/resultsPageContainer.css';
+import { Container, Segment, Divider, Grid, Header } from 'semantic-ui-react';
 
 import Foods from './resultsPage/foodsResults';
 import Drinks from './resultsPage/drinksResults';
@@ -13,18 +14,29 @@ class ResultsPageContainer extends React.Component {
   render() {
     return (
       <div className='resultsPage'>
-        <div className='header'>
+        <Container className='header'>
           <h1>Options</h1>
-        </div>
+        </Container>
 
-        <div className='selectedOptionsResults'>
-          <SelectedOptions />
-        </div>
+        <Container className='searchResults'>
+          <Grid columns='three' divided>
+            <Grid.Row stretched>
+              <Grid.Column>
+                <Segment> <SelectedOptions /> </Segment>
+              </Grid.Column>
 
-        <div className='searchResults'>
-          <Drinks />
-          <Foods />
-        </div>
+              <Grid.Column>
+                <Segment> <Foods /> </Segment>
+                <Segment> <Drinks /> </Segment>
+                <Segment> <Events /> </Segment>
+              </Grid.Column>
+
+              <Grid.Column>
+              
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Container>
       </div>
    )
   }

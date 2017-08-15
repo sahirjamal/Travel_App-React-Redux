@@ -5,6 +5,7 @@ import Foods from './resultsPage/foodsResults';
 import Drinks from './resultsPage/drinksResults';
 import Attractions from './resultsPage/attractionsResults';
 import Arts from './resultsPage/artsResults';
+import Events from './resultsPage/eventsResults';
 import Nightlife from './resultsPage/nightlifeResults';
 import SelectedOptions from './resultsPage/SelectedOptions';
 

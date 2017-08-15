@@ -44,7 +44,7 @@ class Foods extends React.Component {
       <Container className='foods'>
         <h3 className='foodsTitle'>Foods</h3>
         {this.state.foods.map((food) => 
-          <Button color='violet' toggle active={active[food]} size='mini' 
+          <Button color='teal' toggle active={active[food]} size='mini' 
             onClick={() => this.toggleAndActive(food)} key={food}>{food}</Button>)}
       </Container>
     )

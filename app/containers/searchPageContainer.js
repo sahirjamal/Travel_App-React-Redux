@@ -8,8 +8,8 @@ import Foods from './searchPage/foodsSearch';
 import Drinks from './searchPage/drinksSearch';
 import Attractions from './searchPage/attractionsSearch';
 import Arts from './searchPage/artsSearch';
+import Events from './searchPage/eventsSearch';
 import Nightlife from './searchPage/nightlifeSearch';
-import Budget from './searchPage/budgetContainer';
 import SeeResults from './searchPage/seeResultsContainer';
 
 class SearchPageContainer extends React.Component {
@@ -46,6 +46,9 @@ class SearchPageContainer extends React.Component {
             </Grid.Row>
 
             <Grid.Row>
+              <Grid.Column>
+                  <Events />
+              </Grid.Column>
               <Grid.Column>
                  <Nightlife />
               </Grid.Column>

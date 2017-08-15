@@ -6,7 +6,8 @@ const initialState = {
   drinks: [],
   attractions: [],
   arts: [],
-  nightlife: []
+  nightlife: [],
+  events: [],
 };
 
 
@@ -62,6 +63,16 @@ const searchReducer = (state = initialState, action) => {
         currentNightlife.push(action.nightlife);
       }
       return Object.assign({}, state, {nightlife: currentNightlife});
+
+    case types.TOGGLE_EVENTS:
+      const currentEvents = [...state.events];
+      if (_.contains(currentEvents, action.event)) {
+        const currentIndex = _.indexOf(currentEvents, action.event);
+        currentEvents.splice(currentIndex,1);
+      } else {
+        currentEvents.push(action.event);
+      }
+      return Object.assign({}, state, {events: currentEvents});
 
     default:
       return state;

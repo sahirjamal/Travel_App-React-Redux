@@ -8,7 +8,7 @@ import yelp from 'yelp-fusion';
 class DrinksResults extends React.Component {
   render() {
     return (
-      <div className='DrinksResults'>
+      <div className='drinksResults'>
         <h3>Drinks</h3> 
       </div>
     )

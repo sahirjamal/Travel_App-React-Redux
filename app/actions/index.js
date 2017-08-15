@@ -50,12 +50,10 @@ export function toggleNightlife(nightlife) {
   };
 }
 
-// Budget Function
-
-export function changeBudget(budget) {
+export function toggleEvents(event) {
   return {
-    type: types.CHANGE_BUDGET,
-    budget
+    type: types.TOGGLE_EVENTS,
+    event
   };
 }
 

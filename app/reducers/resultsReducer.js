@@ -4,7 +4,7 @@ const initialState = {
   list: []
 }
 
-const resultsReducer = (state = initialState, action) {
+const resultsReducer = (state = initialState, action) => {
   switch (action.type) {
     default: 
       return state;

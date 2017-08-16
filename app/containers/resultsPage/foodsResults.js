@@ -10,6 +10,7 @@ class FoodsResults extends React.Component {
     return (
       <div className='foodsResults'>
         <h3>Foods</h3> 
+        <h1>hi</h1>
       </div>
     )
   }

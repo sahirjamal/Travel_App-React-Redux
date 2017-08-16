@@ -1,15 +1,10 @@
 import React from 'react';
 // import { bindActionCreators } from 'redux';
 import Styling from '../styling/searchPageContainer.css';
-import { Container, Segment, Divider, Grid, Header } from 'semantic-ui-react';
+import { Container, Segment, Grid, Header } from 'semantic-ui-react';
 
 import Location from './searchPage/locationContainer';
-import Foods from './searchPage/foodsSearch';
-import Drinks from './searchPage/drinksSearch';
-import Attractions from './searchPage/attractionsSearch';
-import Arts from './searchPage/artsSearch';
-import Events from './searchPage/eventsSearch';
-import Nightlife from './searchPage/nightlifeSearch';
+import MenuOptions from './searchPage/menuOptions';
 import SeeResults from './searchPage/seeResultsContainer';
 
 class SearchPageContainer extends React.Component {
@@ -28,21 +23,7 @@ class SearchPageContainer extends React.Component {
         </Container>
 
         <Container className='choices'>
-          <Grid columns='two' divided>
-            <Grid.Row>
-              <Grid.Column>
-                <Segment> <Foods /> </Segment>
-                <Segment> <Arts /> </Segment>
-                <Segment> <Events /> </Segment>
-              </Grid.Column>
-
-              <Grid.Column>
-                <Segment> <Drinks /> </Segment>
-                <Segment> <Attractions /> </Segment>
-                <Segment> <Nightlife /> </Segment>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
+          <MenuOptions />
         </Container>
 
         <Container className='seeResults'>

@@ -1,0 +1,19 @@
+.searchPage {
+  /* background-image: url('../images/copenhagen.jpg'); */
+  background-size: 100vw auto;
+  height: 100vh;
+}
+
+/* Header Styling */
+
+.header {
+  font-family: garamond;
+  text-align: center;
+}
+
+/* Travel Now Button Styling */
+
+.seeResults {
+  padding-top: 20px;
+  align-content: center;
+}

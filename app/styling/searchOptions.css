@@ -1,0 +1,65 @@
+/* Location */
+
+.location {
+  display: flex;
+  justify-content: center;
+}
+
+/* Foods Styling */
+.foods {
+  text-align: center;
+}
+
+.foodsTitle {
+  font-size: 30px;
+}
+
+/* Drinks Styling */
+
+.drinks {
+  text-align: center;
+}
+
+.drinksTitle {
+  font-size: 30px;
+}
+
+/* Attractions Styling */
+
+.attractions {
+  text-align: center;
+}
+
+.attractionsTitle {
+  font-size: 30px;
+}
+
+/* Arts Styling */
+
+.arts {
+  text-align: center;
+}
+
+.artsTitle {
+  font-size: 30px;
+}
+
+/* Events Styling */
+
+.events {
+  text-align: center;
+}
+
+.eventsTitle {
+  font-size: 30px;
+}
+
+/* Nightlife Styling */
+
+.nightlife {
+  text-align: center;
+}
+
+.nightlifeTitle {
+  font-size: 30px;
+}

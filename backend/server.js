@@ -3,8 +3,19 @@ const path = require('path');
 const yelp = require('yelp-fusion');
 const api = require('./routes');
 const app = express();
+const bodyParser = require('body-parser');
 
 app.use(express.static('build'));
+
+app.use(bodyParser.urlencoded({extended: false }));
+
+app.use(bodyParser.json());
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Cache-Control");
+  next();
+});
 
 app.use('/api', api);
 

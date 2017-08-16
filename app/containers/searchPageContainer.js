@@ -19,8 +19,10 @@ class SearchPageContainer extends React.Component {
         <Container className='header'>
           <Grid columns='one'>
             <Grid.Column>
-              <Header as='h1'>Plan Your Journey</Header>
-              <Location />
+              <Segment>
+                <Header as='h1'>Plan Your Journey</Header>
+                <Location />
+              </Segment>
             </Grid.Column>
           </Grid>
         </Container>
@@ -29,28 +31,15 @@ class SearchPageContainer extends React.Component {
           <Grid columns='two' divided>
             <Grid.Row>
               <Grid.Column>
-                  <Foods />
+                <Segment> <Foods /> </Segment>
+                <Segment> <Arts /> </Segment>
+                <Segment> <Events /> </Segment>
               </Grid.Column>
-              <Grid.Column>
-                  <Drinks />
-              </Grid.Column>
-            </Grid.Row>
 
-            <Grid.Row>
               <Grid.Column>
-                  <Arts />
-              </Grid.Column>
-              <Grid.Column>
-                  <Attractions />
-              </Grid.Column>
-            </Grid.Row>
-
-            <Grid.Row>
-              <Grid.Column>
-                  <Events />
-              </Grid.Column>
-              <Grid.Column>
-                 <Nightlife />
+                <Segment> <Drinks /> </Segment>
+                <Segment> <Attractions /> </Segment>
+                <Segment> <Nightlife /> </Segment>
               </Grid.Column>
             </Grid.Row>
           </Grid>

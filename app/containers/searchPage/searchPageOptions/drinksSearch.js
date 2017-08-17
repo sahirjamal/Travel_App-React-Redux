@@ -13,14 +13,16 @@ class Drinks extends React.Component {
 
     this.state = {
       drinks1: [
-        {drink: 'Coffee', image: 'http://www.menshealth.com/sites/menshealth.com/files/coffee-mug.jpg'},
-        {drink: 'Tea', image: 'http://www.natashaspierogi.com/wp-content/uploads/2016/05/Tea.jpg'},
-        {drink: 'Smoothies', image: 'http://afewdollarsmore.com/wp-content/uploads/2015/03/smoothies-2.jpg'}
+        {drink: 'Coffee', image: 'http://localhost:3000/images/drinks/coffee.jpg'},
+        {drink: 'Tea', image: 'http://localhost:3000/images/drinks/tea.jpg'},
       ],
       drinks2: [
-        {drink: 'Cocktails', image: 'https://cdn.liquor.com/wp-content/uploads/2015/03/hub_classic_cocktail_margarita.jpg'},
-        {drink: 'Wine & Spirits', image: 'http://www.aflightofwineandspirits.com/wp-content/themes/flightofwine/images/wine-bottles.jpg'},
-        {drink: 'Beer', image: 'http://cdn0.wideopencountry.com/wp-content/uploads/2017/04/beer-793x526.jpg'}
+        {drink: 'Smoothies', image: 'http://localhost:3000/images/drinks/smoothie.jpg'},
+        {drink: 'Cocktails', image: 'http://localhost:3000/images/drinks/cocktail.jpg'},
+      ],
+      drinks3: [
+        {drink: 'Wine & Spirits', image: 'http://localhost:3000/images/drinks/wine.jpg'},
+        {drink: 'Beer', image: 'http://localhost:3000/images/drinks/beer.jpg'}
       ]
     }
   }
@@ -36,11 +38,11 @@ class Drinks extends React.Component {
   render() {
     return (
       <Container className='drinks'>
-        <Grid columns='two'>
+        <Grid columns='three'>
           <Grid.Column>
             {Object.values(this.state.drinks1).map((obj) => 
                 <Segment compact textAlign='center' key={uuid()}>
-                  <Image src={obj.image} size='small'/>
+                  <Image className='searchImage' src={obj.image} size='small'/>
                   <Button compact size='small' toggle active={this.active(obj.drink)} 
                     onClick={() => this.props.toggleDrinks(obj.drink)}>{obj.drink}</Button>
                 </Segment>
@@ -50,7 +52,17 @@ class Drinks extends React.Component {
           <Grid.Column>
             {Object.values(this.state.drinks2).map((obj) => 
               <Segment compact textAlign='center' key={uuid()}>
-                <Image src={obj.image} size='small'/>
+                <Image className='searchImage' src={obj.image} size='small'/>
+                <Button compact size='small' toggle active={this.active(obj.drink)} 
+                  onClick={() => this.props.toggleDrinks(obj.drink)}>{obj.drink}</Button>
+              </Segment>
+            )}
+          </Grid.Column>
+
+          <Grid.Column>
+            {Object.values(this.state.drinks3).map((obj) => 
+              <Segment compact textAlign='center' key={uuid()}>
+                <Image className='searchImage' src={obj.image} size='small'/>
                 <Button compact size='small' toggle active={this.active(obj.drink)} 
                   onClick={() => this.props.toggleDrinks(obj.drink)}>{obj.drink}</Button>
               </Segment>

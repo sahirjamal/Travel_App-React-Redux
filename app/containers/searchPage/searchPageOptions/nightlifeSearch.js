@@ -13,15 +13,17 @@ class Nightlife extends React.Component {
 
     this.state = {
       nightlife1: [
-        {nightlife: 'Dive Bars', image: 'http://images.teamsugar.com/files/upl1/1/17470/34_2008/art_divebar_01.preview.jpg'},
-        {nightlife: 'Dance Clubs', image: 'http://www.reservesandiego.com/travelguide/wp-content/uploads/sites/2/2015/02/Dance-Club-154078597.jpg'},
-        {nightlife: 'Lounges', image: 'http://icyhotevents.com/galleries/lounges/06.jpg'},
-        {nightlife: 'Wine Bars', image: 'https://vinumvine.files.wordpress.com/2010/03/beijingwinebar.jpg'}
+        {nightlife: 'Dive Bars', image: 'http://localhost:3000/images/nightlife/diveBar.jpg'},
+        {nightlife: 'Dance Clubs', image: 'http://localhost:3000/images/nightlife/danceClub.jpg'},
+        {nightlife: 'Lounges', image: 'http://localhost:3000/images/nightlife/lounge.jpg'},
       ],
       nightlife2: [
-        {nightlife: 'Cocktail Bars', image: 'https://media.timeout.com/images/102875625/image.jpg'},
-        {nightlife: 'Pubs', image: 'https://static01.nyt.com/images/2008/04/13/travel/13jour600.1.jpg'},
-        {nightlife: 'Sports Bars', image: 'http://www.myrtlebeachlife.com/wp-content/uploads/sites/3/2020/03/SportsBars.jpg'}
+        {nightlife: 'Wine Bars', image: 'http://localhost:3000/images/nightlife/wineBar.jpg'},
+        {nightlife: 'Cocktail Bars', image: 'http://localhost:3000/images/nightlife/cocktailbar.jpg'},
+      ],
+      nightlife3: [
+        {nightlife: 'Pubs', image: 'http://localhost:3000/images/nightlife/pub.jpg'},
+        {nightlife: 'Sports Bars', image: 'http://localhost:3000/images/nightlife/sportBar.jpg'}
       ]
     }
   }
@@ -37,11 +39,11 @@ class Nightlife extends React.Component {
   render() {
     return (
       <Container className='nightlife'>
-        <Grid columns='two'>
+        <Grid columns='three'>
           <Grid.Column>
             {Object.values(this.state.nightlife1).map((obj) => 
                 <Segment compact textAlign='center' key={uuid()}>
-                  <Image src={obj.image} size='small'/>
+                  <Image className='searchImage' src={obj.image} size='small'/>
                   <Button compact size='small' toggle active={this.active(obj.nightlife)} 
                     onClick={() => this.props.toggleNightlife(obj.nightlife)}>{obj.nightlife}</Button>
                 </Segment>
@@ -51,7 +53,17 @@ class Nightlife extends React.Component {
           <Grid.Column>
             {Object.values(this.state.nightlife2).map((obj) => 
               <Segment compact textAlign='center' key={uuid()}>
-                <Image src={obj.image} size='small'/>
+                <Image className='searchImage' src={obj.image} size='small'/>
+                <Button compact size='small' toggle active={this.active(obj.nightlife)} 
+                  onClick={() => this.props.toggleNightlife(obj.nightlife)}>{obj.nightlife}</Button>
+              </Segment>
+            )}
+          </Grid.Column>
+
+          <Grid.Column>
+            {Object.values(this.state.nightlife3).map((obj) => 
+              <Segment compact textAlign='center' key={uuid()}>
+                <Image className='searchImage' src={obj.image} size='small'/>
                 <Button compact size='small' toggle active={this.active(obj.nightlife)} 
                   onClick={() => this.props.toggleNightlife(obj.nightlife)}>{obj.nightlife}</Button>
               </Segment>

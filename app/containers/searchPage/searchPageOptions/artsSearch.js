@@ -13,12 +13,16 @@ class Arts extends React.Component {
 
     this.state = {
       arts1: [
-        {art: 'Comedy Shows', image: 'https://img.grouponcdn.com/deal/mcfAPXki3MvFR2nu7gAePM/114323563-2048x1229/v1/c700x420.jpg'},
-        {art: 'Theatre', image: 'http://cdn1.theodysseyonline.com/files/2015/12/22/6358634780756009771241750938_arts51.jpg'}
+        {art: 'Comedy Shows', image: 'http://localhost:3000/images/arts/comedy.jpg'},
+        {art: 'Theatre', image: 'http://localhost:3000/images/arts/theatre.jpg'}
       ],
       arts2: [
-        {art: 'Art Galleries', image: 'http://theawesomedaily.com/wp-content/uploads/2017/01/art-gallery-feat.jpg'},
-        {art: 'Music Venues', image: 'http://www.cirrusresearch.co.uk/blog/wp-content/uploads/2014/12/Music-Venues-Under-Threat.jpg'}
+        {art: 'Art Galleries', image: 'http://localhost:3000/images/arts/artGallery.jpg'},
+        {art: 'Music Venues', image: 'http://localhost:3000/images/arts/musicVenue.jpg'}
+      ],
+      arts3: [
+        {art: 'Opera', image: 'http://localhost:3000/images/arts/opera.jpg'},
+        {art: 'Dance', image: 'http://localhost:3000/images/arts/dance.jpg'}
       ]
     }
   }
@@ -34,11 +38,11 @@ class Arts extends React.Component {
   render() {
     return (
       <Container className='arts'>
-        <Grid columns='two'>
+        <Grid columns='three'>
           <Grid.Column>
             {Object.values(this.state.arts1).map((obj) => 
                 <Segment compact textAlign='center' key={uuid()}>
-                  <Image src={obj.image} size='small'/>
+                  <Image className='searchImage' src={obj.image} size='small'/>
                   <Button compact size='small' toggle active={this.active(obj.art)} 
                     onClick={() => this.props.toggleArts(obj.art)}>{obj.art}</Button>
                 </Segment>
@@ -48,7 +52,17 @@ class Arts extends React.Component {
           <Grid.Column>
             {Object.values(this.state.arts2).map((obj) => 
               <Segment compact textAlign='center' key={uuid()}>
-                <Image src={obj.image} size='small'/>
+                <Image className='searchImage' src={obj.image} size='small'/>
+                <Button compact size='small' toggle active={this.active(obj.art)} 
+                  onClick={() => this.props.toggleArts(obj.art)}>{obj.art}</Button>
+              </Segment>
+            )}
+          </Grid.Column>
+
+          <Grid.Column>
+            {Object.values(this.state.arts3).map((obj) => 
+              <Segment compact textAlign='center' key={uuid()}>
+                <Image className='searchImage' src={obj.image} size='small'/>
                 <Button compact size='small' toggle active={this.active(obj.art)} 
                   onClick={() => this.props.toggleArts(obj.art)}>{obj.art}</Button>
               </Segment>

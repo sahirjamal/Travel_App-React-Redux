@@ -13,13 +13,16 @@ class Events extends React.Component {
 
     this.state = {
       events1: [
-        {event: 'Social', image: 'http://eon51.com/wp-content/uploads/2015/06/guest-enjoying-the-view-at-eon-heli-bar.jpg'},
-        {event: 'Adventure', image: 'http://first4adventure.co.uk/wp-content/uploads/2014/03/Fotolia-girl-sunset.jpg'},
-        {event: 'Music', image: 'https://www.sxsw.com/wp-content/uploads/2017/03/Gary-Clark-Jr.-photo-courtesy-of-the-artist.jpg'}
+        {event: 'Social', image: 'http://localhost:3000/images/events/social.jpg'},
+        {event: 'Adventure', image: 'http://localhost:3000/images/events/adventure.jpg'},
       ],
       events2: [
-        {event: 'Film', image: 'http://www.saga.co.uk/contentlibrary/saga/publishing/verticals/entertainment/films-and-tv/films-hero-1260x600.jpg'},
-        {event: 'Health & Wellness', image: 'http://www.lovelaconner.com/wp-content/uploads/Health-and-Wellness.jpg'}
+        {event: 'Music', image: 'http://localhost:3000/images/events/music.jpg'},
+        {event: 'Film', image: 'http://localhost:3000/images/events/film.jpg'},
+      ],
+      events3: [
+        {event: 'Photography', image: 'http://localhost:3000/images/events/photography.jpg'},
+        {event: 'Health & Wellness', image: 'http://localhost:3000/images/events/health.png'}
       ]
     }
   }
@@ -35,11 +38,11 @@ class Events extends React.Component {
   render() {
     return (
       <Container className='events'>
-        <Grid columns='two'>
+        <Grid columns='three'>
           <Grid.Column>
             {Object.values(this.state.events1).map((obj) => 
                 <Segment compact textAlign='center' key={uuid()}>
-                  <Image src={obj.image} size='small'/>
+                  <Image className='searchImage' src={obj.image} size='small'/>
                   <Button compact size='small' toggle active={this.active(obj.event)} 
                     onClick={() => this.props.toggleEvents(obj.event)}>{obj.event}</Button>
                 </Segment>
@@ -49,7 +52,17 @@ class Events extends React.Component {
           <Grid.Column>
             {Object.values(this.state.events2).map((obj) => 
               <Segment compact textAlign='center' key={uuid()}>
-                <Image src={obj.image} size='small'/>
+                <Image className='searchImage' src={obj.image} size='small'/>
+                <Button compact size='small' toggle active={this.active(obj.event)} 
+                  onClick={() => this.props.toggleEvents(obj.event)}>{obj.event}</Button>
+              </Segment>
+            )}
+          </Grid.Column>
+
+          <Grid.Column>
+            {Object.values(this.state.events3).map((obj) => 
+              <Segment compact textAlign='center' key={uuid()}>
+                <Image className='searchImage' src={obj.image} size='small'/>
                 <Button compact size='small' toggle active={this.active(obj.event)} 
                   onClick={() => this.props.toggleEvents(obj.event)}>{obj.event}</Button>
               </Segment>

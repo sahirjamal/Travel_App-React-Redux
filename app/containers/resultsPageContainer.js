@@ -15,7 +15,7 @@ class ResultsPageContainer extends React.Component {
     return (
       <div className='resultsPage'>
         <Container className='header'>
-          <h1>Options</h1>
+          <h1>Potential Options</h1>
         </Container>
 
         <Container className='searchResults'>
@@ -32,7 +32,9 @@ class ResultsPageContainer extends React.Component {
               </Grid.Column>
 
               <Grid.Column>
-              
+                <Segment> <Arts /> </Segment>
+                <Segment> <Attractions /> </Segment>
+                <Segment> <Nightlife /> </Segment>
               </Grid.Column>
             </Grid.Row>
           </Grid>

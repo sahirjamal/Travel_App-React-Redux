@@ -1,6 +1,6 @@
 import React from 'react';
 import Styling from '../../styling/results.css';
-import Flexbox from 'flexbox-react';
+
 import axios from 'axios';
 import yelp from 'yelp-fusion';
 

@@ -63,3 +63,9 @@
 .nightlifeTitle {
   font-size: 30px;
 }
+
+/* Image Styling */
+
+.searchImage {
+  padding-bottom: 5px;
+}

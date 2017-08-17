@@ -13,12 +13,16 @@ class Attractions extends React.Component {
 
     this.state = {
       attractions1: [
-        {attraction: 'Parks', image: 'http://dreamatico.com/data_images/park/park-1.jpg'},
-        {attraction: 'Museums', image: 'http://www.thedoubleclicks.com/wp-content/uploads/2016/12/museums1fourseasons.jpg'}
+        {attraction: 'Parks', image: 'http://localhost:3000/images/attractions/park.jpg'},
+        {attraction: 'Museums', image: 'http://localhost:3000/images/attractions/museum.jpg'}
       ],
       attractions2: [
-        {attraction: 'Landmarks', image: 'http://www.newkidscenter.com/images/10415715/Statue_of_Liberty.jpg'},
-        {attraction: 'View Points', image: 'https://media-cdn.tripadvisor.com/media/photo-s/03/4e/3a/91/seethargundu-viewpoint.jpg'}
+        {attraction: 'Monuments', image: 'http://localhost:3000/images/attractions/monument.jpg'},
+        {attraction: 'View Points', image: 'http://localhost:3000/images/attractions/viewpoint.jpg'}
+      ],
+      attractions3: [
+        {attraction: 'Aquarium', image: 'http://localhost:3000/images/attractions/aquarium.jpg'},
+        {attraction: 'Skyscrapers', image: 'http://localhost:3000/images/attractions/skyscraper.jpg'}
       ]
     }
   }
@@ -34,11 +38,11 @@ class Attractions extends React.Component {
   render() {
     return (
       <Container className='attractions'>
-        <Grid columns='two'>
+        <Grid columns='three'>
           <Grid.Column>
             {Object.values(this.state.attractions1).map((obj) => 
                 <Segment compact textAlign='center' key={uuid()}>
-                  <Image src={obj.image} size='small'/>
+                  <Image className='searchImage' src={obj.image} size='small'/>
                   <Button compact size='small' toggle active={this.active(obj.attraction)} 
                     onClick={() => this.props.toggleAttractions(obj.attraction)}>{obj.attraction}</Button>
                 </Segment>
@@ -48,7 +52,17 @@ class Attractions extends React.Component {
           <Grid.Column>
             {Object.values(this.state.attractions2).map((obj) => 
               <Segment compact textAlign='center' key={uuid()}>
-                <Image src={obj.image} size='small'/>
+                <Image className='searchImage' src={obj.image} size='small'/>
+                <Button compact size='small' toggle active={this.active(obj.attraction)} 
+                  onClick={() => this.props.toggleAttractions(obj.attraction)}>{obj.attraction}</Button>
+              </Segment>
+            )}
+          </Grid.Column>
+
+          <Grid.Column>
+            {Object.values(this.state.attractions3).map((obj) => 
+              <Segment compact textAlign='center' key={uuid()}>
+                <Image className='searchImage' src={obj.image} size='small'/>
                 <Button compact size='small' toggle active={this.active(obj.attraction)} 
                   onClick={() => this.props.toggleAttractions(obj.attraction)}>{obj.attraction}</Button>
               </Segment>

@@ -6,9 +6,9 @@ import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory';
 import { Route } from 'react-router';
 import { ConnectedRouter, routerMiddleware, push } from 'react-router-redux';
+
 import rootReducer from './reducers/index';
 import DevTools from './components/reduxDevTools'; // Need to fix this (add store production/development and devTool.instrument())
-
 import HomePageContainer from './containers/homePageContainer';
 import SearchPageContainer from './containers/searchPageContainer';
 import ResultsPageContainer from './containers/resultsPageContainer';

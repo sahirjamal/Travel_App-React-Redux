@@ -1,9 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Container, Divider, Grid, Segment, Header } from 'semantic-ui-react';
-
 import Styling from '../styling/homePageContainer.css';
-import { Button } from 'semantic-ui-react';
+
+import { Container, Divider, Grid, Segment, Header, Button } from 'semantic-ui-react';
 import { navigate } from '../actions/index';
 import paths from '../paths_config';
 

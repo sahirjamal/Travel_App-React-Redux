@@ -1,12 +1,12 @@
 import React from 'react';
-import Styling from '../../styling/searchPageContainer.css';
+import Styling from '../../../styling/searchPageContainer.css';
 import Flexbox from 'flexbox-react';
 import { Button } from 'semantic-ui-react';
 import axios from 'axios';
 
 import { connect } from 'react-redux';
-import { navigate } from '../../actions/index';
-import paths from '../../paths_config';
+import { navigate } from '../../../actions/index';
+import paths from '../../../paths_config';
 
 class SeeResults extends React.Component {
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Styling from '../../styling/searchOptions.css';
+import Styling from '../../../styling/searchOptions.css';
 import Flexbox from 'flexbox-react';
 import { Form } from 'semantic-ui-react';
-import { changeLocation } from '../../actions/index';
+import { changeLocation } from '../../../actions/index';
 
-import locationReducer from '../../reducers/locationReducer';
+import locationReducer from '../../../reducers/locationReducer';
 
 class Location extends React.Component {
 

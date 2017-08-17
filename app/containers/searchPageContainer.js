@@ -3,9 +3,9 @@ import React from 'react';
 import Styling from '../styling/searchPageContainer.css';
 import { Container, Segment, Grid, Header } from 'semantic-ui-react';
 
-import Location from './searchPage/locationContainer';
-import MenuOptions from './searchPage/menuOptions';
-import SeeResults from './searchPage/seeResultsContainer';
+import Location from './searchPage/searchPageExtras/locationContainer';
+import MenuOptions from './searchPage/searchPageExtras/menuOptions';
+import SeeResults from './searchPage/searchPageExtras/seeResultsContainer';
 
 class SearchPageContainer extends React.Component {
   render() {

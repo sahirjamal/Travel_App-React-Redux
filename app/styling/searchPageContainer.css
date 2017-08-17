@@ -12,6 +12,16 @@
   text-align: center;
 }
 
+/* Selected Options Styling */
+
+.selectedOptionsTitle {
+  text-decoration: underline;
+}
+
+.selectedList {
+  text-align: center;
+}
+
 /* Travel Now Button Styling */
 
 .seeResults {

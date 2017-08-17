@@ -5,7 +5,6 @@ import searchReducer from './searchReducer';
 import locationReducer from './locationReducer';
 import resultsReducer from './resultsReducer';
 
-
 const rootReducer = combineReducers({
   searchReducer,
   locationReducer,

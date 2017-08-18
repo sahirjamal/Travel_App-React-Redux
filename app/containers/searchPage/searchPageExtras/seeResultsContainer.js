@@ -12,15 +12,14 @@ import uuid from 'uuid/v4';
 class SeeResults extends React.Component {
 
 clickHandler() {
-  this.props.navigate(paths.RESULTS);
-  
+  this.props.navigate(paths.RESULTS);  
   axios({
     url:'http://localhost:3000/api/searchResults',
     method: 'post',
     data: {
       state: this.props.state,
     }
-  }).then((response) => console.log(response.peter)).catch((e) => console.log(e))
+  }).then((response) => console.log(response)).catch((e) => console.log(e))
 }
 
   render() {

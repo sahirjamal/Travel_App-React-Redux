@@ -1,17 +1,18 @@
 import React from 'react';
-import Styling from '../../styling/resultsPage.css';
-import Flexbox from 'flexbox-react';
+import Styling from '../../styling/results.css';
+
+import axios from 'axios';
+import yelp from 'yelp-fusion';
 
 
 class DrinksResults extends React.Component {
   render() {
     return (
-      <div className='DrinksResults'>
+      <div className='drinksResults'>
         <h3>Drinks</h3> 
       </div>
     )
   }
 }
 
-// comment
 export default DrinksResults

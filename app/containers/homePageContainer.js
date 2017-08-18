@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Styling from '../styling/homePageContainer.css';
 
-import Styling from '../styling/homePage.css';
-import { Button } from 'semantic-ui-react';
+import { Container, Divider, Grid, Segment, Header, Button } from 'semantic-ui-react';
 import { navigate } from '../actions/index';
 import paths from '../paths_config';
 
@@ -11,13 +11,11 @@ class HomePageContainer extends React.Component {
 render() {
     return (
       <div className='fullScreen'>
-        <div className='background'>
-          <div className='homeBody'>
-            <h1 className='title'>Travel Buddy</h1>
-            <h2 className='phrase'>Pack your bags - let us pave the way.</h2>
-            <Button color='blue' onClick={()=>{this.props.navigate(paths.SEARCH)}}>Travel Now</Button>
-          </div>
-        </div>
+        <Container className='homeBody'>
+          <h1 className='title'>Travel Buddy</h1>
+          <h2 className='phrase'>Pack yo shit - let us pave the way.</h2>
+          <Button color='blue' onClick={()=>{this.props.navigate(paths.SEARCH)}}>Travel Now</Button>
+        </Container>
       </div>
       //Herro
     )

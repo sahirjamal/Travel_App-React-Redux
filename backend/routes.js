@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const yelp = require('yelp-fusion');
 const token = process.env.YELP_AUTH_TOKEN;
+
+
 var state;
 var yelpResponse={
   food:'',
@@ -17,6 +19,7 @@ var yelpToken='q5koOf8KoIcJMZZZin-eTYo2xvbQ88Jc70F32zOl9VP-tGWzqeY7O6ktTbA_N_gEd
 
 // Get API Token
 router.use('/token', (req, res) => {
+
   const token = yelp.accessToken(clientId, clientSecret)
   .then(response => {
     console.log(response.jsonBody.access_token);
@@ -24,6 +27,7 @@ router.use('/token', (req, res) => {
 });
 
 // Food Search
+
 router.post('/searchResults', (req, res) => {
   const client = yelp.client(yelpToken);
   if(req.body.state){
@@ -129,9 +133,11 @@ router.get('/searchResults', function(req,res){
   res.send(yelpResponse)
 })
 
+
 // SAMPLE ROUTE
 router.use('/users', (req, res) => {
     res.json({ success: true });
 });
+
 
 module.exports = router;

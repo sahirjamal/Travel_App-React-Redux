@@ -9,6 +9,10 @@ export const TOGGLE_DRINKS = 'TOGGLE_DRINKS';
 export const TOGGLE_ATTRACTIONS = 'TOGGLE_ATTRACTIONS';
 export const TOGGLE_ARTS = 'TOGGLE_ARTS';
 export const TOGGLE_NIGHTLIFE = 'TOGGLE_NIGHTLIFE';
+export const TOGGLE_EVENTS = 'TOGGLE_EVENTS';
 
 // Budget actions
 export const CHANGE_BUDGET = 'CHANGE_BUDGET';
+
+// Results actions
+export const ADD_TO_LIST = 'ADD_TO_LIST';

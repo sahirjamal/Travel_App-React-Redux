@@ -3,13 +3,12 @@ import { routerReducer } from 'react-router-redux';
 
 import searchReducer from './searchReducer';
 import locationReducer from './locationReducer';
-import budgetReducer from './budgetReducer';
-
+import resultsReducer from './resultsReducer';
 
 const rootReducer = combineReducers({
   searchReducer,
   locationReducer,
-  budgetReducer,
+  resultsReducer,
   router: routerReducer
 })
 

@@ -50,11 +50,18 @@ export function toggleNightlife(nightlife) {
   };
 }
 
-// Budget Function
-
-export function changeBudget(budget) {
+export function toggleEvents(event) {
   return {
-    type: types.CHANGE_BUDGET,
-    budget
+    type: types.TOGGLE_EVENTS,
+    event
   };
+}
+
+// Results Function
+
+export function addToList(place) {
+  return {
+    type: types.ADD_TO_LIST,
+    place
+  }
 }

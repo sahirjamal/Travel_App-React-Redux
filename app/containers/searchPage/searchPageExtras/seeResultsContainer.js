@@ -7,14 +7,14 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { navigate } from '../../../actions/index';
 import paths from '../../../paths_config';
+import uuid from 'uuid/v4';
 
 class SeeResults extends React.Component {
 
 clickHandler() {
-  this.props.navigate(paths.RESULTS);
-
+  this.props.navigate(paths.RESULTS);  
   axios({
-    url:'http://localhost:3000/api/food',
+    url:'http://localhost:3000/api/searchResults',
     method: 'post',
     data: {
       state: this.props.state,
@@ -25,7 +25,7 @@ clickHandler() {
   render() {
     return (
       <div className='seeResultsButton'>
-            <Button size='large' onClick={()=>{this.clickHandler()}} key='seeResultsKey'>See Results</Button>
+            <Button size='large' onClick={()=>{this.clickHandler()}} key={uuid()}>Create Your Itinerary</Button>
       </div>
     )
   }
@@ -46,6 +46,6 @@ const mapDispatchToProps = (dispatch) => {
 
 
 export default connect(
-  mapStateToProps,
+  mapStateToProps, 
   mapDispatchToProps
 )(SeeResults)

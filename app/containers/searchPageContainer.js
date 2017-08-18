@@ -1,41 +1,39 @@
 import React from 'react';
 // import { bindActionCreators } from 'redux';
-import Styling from '../styling/searchPage.css';
+import Styling from '../styling/searchPageContainer.css';
+import { Container, Segment, Grid, Header } from 'semantic-ui-react';
 
-import Location from './searchPage/locationContainer';
-import Foods from './searchPage/foodsSearch';
-import Drinks from './searchPage/drinksSearch';
-import Attractions from './searchPage/attractionsSearch';
-import Arts from './searchPage/artsSearch';
-import Nightlife from './searchPage/nightlifeSearch';
-import Budget from './searchPage/budgetContainer';
-import TravelNow from './searchPage/travelNowContainer';
+import Location from './searchPage/searchPageExtras/locationContainer';
+import MenuOptions from './searchPage/searchPageExtras/menuOptions';
+import SeeResults from './searchPage/searchPageExtras/seeResultsContainer';
 
 class SearchPageContainer extends React.Component {
-    render() {
-      return (
-        <div className='searchPage'>
-          <div className='header'>
-            <h1>Plan Your Journey</h1>
-            <Location />
-          </div>
-  
-          <div className='choices'>
-              <Foods />
-              <Drinks />
-              <Attractions />
-              <Arts />
-              <Nightlife />
-          </div>
+  render() {
+    return (
+      <div className='searchPage'>
+        <Container className='header'>
+          <Grid columns='one'>
+            <Grid.Column>
+              <Segment>
+                <Header as='h1'>Plan Your Journey</Header>
+                <Location />
+              </Segment>
+            </Grid.Column>
+          </Grid>
+        </Container>
 
-          <div className='budget'>
-            <Budget />
-          </div>
+        <Container className='choices'>
+          <MenuOptions />
+        </Container>
 
-          <div className='travelNow'>
-            <TravelNow />
-          </div>
-        </div>
+        <Container className='seeResults'>
+          <Grid columns='one' textAlign='center'>
+            <Grid.Column>
+              <SeeResults />
+            </Grid.Column>
+          </Grid>
+        </Container>
+      </div>
      )
     }
   }

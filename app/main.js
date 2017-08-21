@@ -8,10 +8,11 @@ import { Route } from 'react-router';
 import { ConnectedRouter, routerMiddleware, push } from 'react-router-redux';
 
 import rootReducer from './reducers/index';
-import DevTools from './components/reduxDevTools'; // Need to fix this (add store production/development and devTool.instrument())
 import HomePageContainer from './containers/homePageContainer';
 import SearchPageContainer from './containers/searchPageContainer';
 import ResultsPageContainer from './containers/resultsPageContainer';
+import Login from './containers/login';
+import Signup from './containers/signup';
 
 // Create a history of your choosing (we're using a browser history in this case)
 const history = createHistory();
@@ -25,6 +26,8 @@ ReactDOM.render(<Provider store={store}>
 	<ConnectedRouter history={history}>
 		<div>
 			<Route path="/" exact component={HomePageContainer}/>
+			<Route path="/login" exact component={Login} />
+			<Route path="/signup" exact component={Signup} />
 			<Route path="/search" exact component={SearchPageContainer}/>
 			<Route path="/results" exact component={ResultsPageContainer}/>
 		</div>

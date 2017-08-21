@@ -59,9 +59,9 @@ export function toggleEvents(event) {
 
 // Results Function
 
-export function addToList(place) {
+export function addResults(results) {
   return {
-    type: types.ADD_TO_LIST,
-    place
+    type: types.ADD_RESULTS,
+    results
   }
 }

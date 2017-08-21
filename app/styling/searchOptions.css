@@ -1,8 +1,12 @@
-/* Location */
+/* Header Styling */
 
 .location {
   display: flex;
   justify-content: center;
+}
+
+.searchIcon {
+  padding-top: 7px;
 }
 
 /* Foods Styling */

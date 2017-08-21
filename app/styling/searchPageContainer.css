@@ -1,8 +1,8 @@
 .searchPage {
-  /* background-image: url('../images/copenhagen.jpg'); */
   background-size: 100vw auto;
   height: 100vh;
-  /* background-color: #F8962E; */
+  background-color: #E1DBDF;
+  padding-top: 15px;
 }
 
 /* Header Styling */

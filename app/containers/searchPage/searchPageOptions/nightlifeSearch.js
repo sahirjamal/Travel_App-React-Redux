@@ -15,7 +15,6 @@ class Nightlife extends React.Component {
       nightlife1: [
         {nightlife: 'Dive Bars', image: 'http://localhost:3000/images/nightlife/diveBar.jpg'},
         {nightlife: 'Dance Clubs', image: 'http://localhost:3000/images/nightlife/danceClub.jpg'},
-        {nightlife: 'Lounges', image: 'http://localhost:3000/images/nightlife/lounge.jpg'},
       ],
       nightlife2: [
         {nightlife: 'Wine Bars', image: 'http://localhost:3000/images/nightlife/wineBar.jpg'},

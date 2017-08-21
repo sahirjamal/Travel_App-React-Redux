@@ -11,13 +11,16 @@ class HomePageContainer extends React.Component {
 render() {
     return (
       <div className='fullScreen'>
+        <Container>
+          <Button onClick={() => {this.props.navigate(paths.LOGIN)}}>Login</Button>
+          <Button onClick={() => {this.props.navigate(paths.SIGNUP)}}>Signup</Button>
+        </Container>
         <Container className='homeBody'>
           <h1 className='title'>Travel Buddy</h1>
           <h2 className='phrase'>Pack yo shit - let us pave the way.</h2>
           <Button color='blue' onClick={()=>{this.props.navigate(paths.SEARCH)}}>Travel Now</Button>
         </Container>
       </div>
-      //Herro
     )
   }
 }

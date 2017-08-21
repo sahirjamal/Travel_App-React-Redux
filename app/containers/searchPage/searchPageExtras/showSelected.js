@@ -25,7 +25,7 @@ class ShowSelected extends React.Component {
         <Grid.Row stretched>
           <Header as='h4' textAlign='center' className='selectedOptionsTitle'>Whatchu lookin for?</Header>
           {this.selected()}
-          <List floated='right' className='selectedList' items={values} />
+          <List floated='left' className='selectedList' items={values} />
         </Grid.Row>
       </Container>
     )

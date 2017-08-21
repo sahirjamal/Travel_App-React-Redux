@@ -15,4 +15,4 @@ export const TOGGLE_EVENTS = 'TOGGLE_EVENTS';
 export const CHANGE_BUDGET = 'CHANGE_BUDGET';
 
 // Results actions
-export const ADD_TO_LIST = 'ADD_TO_LIST';
+export const ADD_RESULTS = 'ADD_RESULTS';
